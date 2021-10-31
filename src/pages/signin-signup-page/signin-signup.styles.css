@@ -1,0 +1,19 @@
+.signinsignup-container {
+  width: 80vw;
+  margin: auto;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5rem;
+}
+@media (max-width: 768px) {
+  .signinsignup-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+@media (max-width: 360px) {
+  .signinsignup-container {
+    width: 90vw;
+  }
+}

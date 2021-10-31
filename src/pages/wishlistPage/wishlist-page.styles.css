@@ -1,0 +1,31 @@
+.wishlist-container {
+  width: 80vw;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.wishlist-title {
+  margin-bottom: 40px;
+  letter-spacing: 8px;
+  font-weight: 300;
+  /* background-color: aliceblue; */
+  cursor: pointer;
+}
+
+.wishlisted-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+}
+
+@media (max-width: 768px) {
+  .wishlist-title {
+    letter-spacing: 5px;
+    font-size: 20px;
+    text-align: justify;
+  }
+
+  .wishlisted-items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

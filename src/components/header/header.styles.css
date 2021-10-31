@@ -1,0 +1,49 @@
+.header-wrapper {
+  width: 90vw;
+  height: 80px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-family: "Philosopher", sans-serif;
+  width: 20%;
+  font-size: 50px;
+}
+
+.navigation-links {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.option {
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+}
+/* .svgIcon {
+  width: 30px;
+} */
+
+@media (max-width: 768px) {
+  .header-wrapper {
+    flex-direction: column;
+    height: 130px;
+  }
+  .logo {
+    font-family: "Philosopher", sans-serif;
+    width: 50%;
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .navigation-links {
+    width: 90%;
+  }
+}
+@media (max-width: 360px) {
+}

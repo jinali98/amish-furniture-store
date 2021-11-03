@@ -10,10 +10,25 @@ export const selectShopItems = createSelector(
 //converted the shop object in to an array
 export const selectShopItemsConverted = createSelector(
   [selectShopItems],
-  (shop) => Object.keys(shop).map((key) => shop[key])
+  (shop) => (shop ? Object.keys(shop).map((key) => shop[key]) : [])
 );
 
 //get the collection for each category
 
 export const selectCollection = (urlParam) =>
-  createSelector([selectShopItems], (collections) => collections[urlParam]);
+  createSelector([selectShopItems], (collections) =>
+    collections ? collections[urlParam] : null
+  );
+
+export const selectIsLoading = createSelector(
+  [selectShop],
+  (shop) => shop.isLoading
+);
+export const selectErrorMessage = createSelector(
+  [selectShop],
+  (shop) => shop.errorMessage
+);
+export const selectIsShopLoaded = createSelector(
+  [selectShop],
+  (shop) => !!shop.shop
+);

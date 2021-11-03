@@ -12,6 +12,8 @@ const config = {
   measurementId: "G-8SS0E5FH4Y",
 };
 
+firebase.initializeApp(config);
+
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
 
@@ -37,7 +39,44 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   return userRef;
 };
 
-firebase.initializeApp(config);
+//create  collection/document
+export const addCollectionAndDocuments = async (
+  collectionKey,
+  objectsToAdd
+) => {
+  const collectionRef = firestore.collection(collectionKey);
+  console.log(collectionRef);
+
+  const batch = firestore.batch();
+  objectsToAdd.forEach((obj) => {
+    console.log(obj);
+    const newDocRef = collectionRef.doc();
+    batch.set(newDocRef, obj);
+  });
+
+  return await batch.commit();
+};
+
+//this is to conver the received reference object in to actual data we want
+export const convertCollectionsSnapshotToMap = (collections) => {
+  const transformaedCollection = collections.docs.map((doc) => {
+    const { title, items } = doc.data();
+
+    return {
+      routeName: encodeURI(title.toLowerCase().trim()),
+      id: doc.id,
+      title,
+      items,
+    };
+  });
+
+  //convert the shop data array to an object
+  return transformaedCollection.reduce((acc, collection) => {
+    acc[collection.title.toLowerCase()] = collection;
+
+    return acc;
+  }, {});
+};
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();

@@ -4,6 +4,7 @@ import { selectCollection } from "../../redux/shop/shop.selectors";
 import PreviewItem from "../../components/preview-item/preview-item.component";
 
 const CategoryPage = ({ match, collection }) => {
+  console.log(match);
   const { title, items } = collection;
   return (
     <div className="preview-container">

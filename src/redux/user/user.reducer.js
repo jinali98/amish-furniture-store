@@ -7,7 +7,7 @@ const INITIAL_STATE = {
 
 const userReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case userActionTypes.SET_CURRENT_USER:
+    case userActionTypes.SIGN_UP_SUCCESS:
     case userActionTypes.SIGN_IN_SUCCESS:
       return {
         ...state,
@@ -15,9 +15,18 @@ const userReducer = (state = INITIAL_STATE, action) => {
       };
 
     case userActionTypes.SIGN_IN_FAIL:
+    case userActionTypes.SIGN_UP_FAIL:
+    case userActionTypes.SIGN_OUT_FAIL:
       return {
         ...state,
         errorMessage: action.payload,
+      };
+
+    case userActionTypes.SIGN_OUT_SUCCESS:
+      return {
+        ...state,
+        currentUser: null,
+        errorMessage: null,
       };
 
     default:

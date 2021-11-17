@@ -1,33 +1,43 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addItems, removeItems } from "../../redux/cart/cart.actions";
-import "./checkout-item.styles.css";
+import {
+  CheckoutItemDetails,
+  CheckoutItemImage,
+  CheckoutItemName,
+  CheckoutItemPrice,
+  CheckoutItemQuantity,
+  CheckoutItemWrapper,
+  DecrementIcon,
+  IncrementIcon,
+  ItemTotalAmount,
+  QuantityChangeContainer,
+} from "./checkout-item.styles";
 
 const CheckoutItem = ({ item, increment, decrement }) => {
   const { imageUrl, name, price, quantity } = item;
   return (
-    <div className="checkout-item-wrapper">
-      <div
-        className="item-img"
+    <CheckoutItemWrapper>
+      <CheckoutItemImage
         style={{
           backgroundImage: `url(${imageUrl})`,
         }}
-      ></div>
-      <div className="item-details">
-        <p className="item-name">{name}</p>
-        <p className="item-price">${price}</p>
-        <div className="quantity-change-container">
-          <div className="decrement-icon" onClick={() => decrement(item)}>
+      />
+      <CheckoutItemDetails>
+        <CheckoutItemName>{name}</CheckoutItemName>
+        <CheckoutItemPrice>${price}</CheckoutItemPrice>
+        <QuantityChangeContainer>
+          <DecrementIcon onClick={() => decrement(item)}>
             &#10094;
-          </div>
-          <p className="item-quantity">{quantity}</p>
-          <div className="increment-icon" onClick={() => increment(item)}>
+          </DecrementIcon>
+          <CheckoutItemQuantity>{quantity}</CheckoutItemQuantity>
+          <IncrementIcon onClick={() => increment(item)}>
             &#10095;
-          </div>
-        </div>
-      </div>
-      <p className="item-total-amount">${quantity * price}</p>
-    </div>
+          </IncrementIcon>
+        </QuantityChangeContainer>
+      </CheckoutItemDetails>
+      <ItemTotalAmount>${quantity * price}</ItemTotalAmount>
+    </CheckoutItemWrapper>
   );
 };
 

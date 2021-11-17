@@ -1,22 +1,27 @@
 import React from "react";
-import "./cart-item.styles.css";
+import {
+  CartItemDetails,
+  CartItemImage,
+  CartItemName,
+  CartItemPrice,
+  CartItemWrapper,
+} from "./cart-item.styles";
 
 const CartItem = ({ item: { imageUrl, price, name, quantity } }) => {
   return (
-    <div className="cart-item-wrapper">
-      <div
-        className="cart-item-image"
+    <CartItemWrapper>
+      <CartItemImage
         style={{
           backgroundImage: `url(${imageUrl})`,
         }}
       />
-      <div className="cart-item-details">
-        <p className="cart-item-name">{name}</p>
-        <p className="cart-item-price">
+      <CartItemDetails>
+        <CartItemName>{name}</CartItemName>
+        <CartItemPrice>
           ${price} X {quantity}
-        </p>
-      </div>
-    </div>
+        </CartItemPrice>
+      </CartItemDetails>
+    </CartItemWrapper>
   );
 };
 

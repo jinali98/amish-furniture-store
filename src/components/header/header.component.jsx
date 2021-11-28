@@ -7,37 +7,36 @@ import CartIcon from "../cart-icon/cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 import { selectHiddenState } from "../../redux/cart/cart.selectors";
 import { selectCurrentuser } from "../../redux/user/user.selectors";
-import { auth } from "../../firebase/firebase.utils";
-import "./header.styles.css";
 import WishlistIcon from "../whishlist-icon/whishlist-icon.component";
 import { signOutStart } from "../../redux/user/user.actions";
+import {
+  HeaderWrapper,
+  Logo,
+  NavigationLinks,
+  OptionLink,
+  OptionPara,
+} from "./header.styles";
 
 const Header = ({ currentUser, hidden, signout }) => {
   return (
-    <div className="header-wrapper">
-      <Link className="logo" to="/">
+    <HeaderWrapper>
+      <Logo className="logo" to="/">
         Amish
-      </Link>
-      <div className="navigation-links">
-        <Link className="option" to="/shop">
-          SHOP
-        </Link>
+      </Logo>
+      <NavigationLinks>
+        <OptionLink to="/shop">SHOP</OptionLink>
         {currentUser ? (
-          <p className="option" onClick={signout}>
-            SIGN OUT
-          </p>
+          <OptionPara onClick={signout}>SIGN OUT</OptionPara>
         ) : (
-          <Link className="option " to="/signin">
-            Sign In
-          </Link>
+          <OptionLink to="/signin">Sign In</OptionLink>
         )}
         <Link to="/wishlist">
           <WishlistIcon />
         </Link>
         <CartIcon />
-      </div>
+      </NavigationLinks>
       {!hidden && <CartDropdown />}
-    </div>
+    </HeaderWrapper>
   );
 };
 

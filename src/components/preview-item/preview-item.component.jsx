@@ -6,7 +6,7 @@ import { ReactComponent as Heart } from "../../assets/heart.svg";
 import "./preview-item.styles.css";
 import { addItemsToWishlist } from "../../redux/whishlist/wishlist.actions";
 const PreviewItem = ({ item, addItem, wishlisted }) => {
-  const { imageUrl, price, name, id } = item;
+  const { imageUrl, price, name } = item;
   return (
     <div className="preview-item">
       <div

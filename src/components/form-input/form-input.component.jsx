@@ -1,16 +1,12 @@
 import React from "react";
-import "./form-input.styles.css";
+import { FormInputGroup, FormLabel, FormInputField } from "./form-input.styles";
 
 const FormInput = ({ label, inputChangeHandler, ...otherProps }) => {
   return (
-    <div className="form-input-group">
-      <label className="form-label">{label}</label>
-      <input
-        className="form-input"
-        {...otherProps}
-        onChange={inputChangeHandler}
-      />
-    </div>
+    <FormInputGroup>
+      <FormLabel>{label}</FormLabel>
+      <FormInputField {...otherProps} onChange={inputChangeHandler} />
+    </FormInputGroup>
   );
 };
 

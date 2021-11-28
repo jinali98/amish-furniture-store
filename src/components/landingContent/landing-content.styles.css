@@ -78,10 +78,6 @@
     width: 500px;
     font-weight: 100;
   }
-
-  /* .landing-btn {
-    width: 500px;
-  } */
 }
 @media (max-width: 360px) {
   .landing-heading {
@@ -92,8 +88,4 @@
   .landing-para {
     width: 300px;
   }
-
-  /* .landing-btn {
-    width: 300px;
-  } */
 }

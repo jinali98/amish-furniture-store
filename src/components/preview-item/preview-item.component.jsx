@@ -2,31 +2,38 @@ import React from "react";
 import { connect } from "react-redux";
 import { addItems } from "../../redux/cart/cart.actions";
 import CustomButton from "../custom-button/custom-button.component";
-import { ReactComponent as Heart } from "../../assets/heart.svg";
-import "./preview-item.styles.css";
+
 import { addItemsToWishlist } from "../../redux/whishlist/wishlist.actions";
+import {
+  HeartIcon,
+  PreviewItemDetails,
+  PreviewItemImage,
+  PreviewItemName,
+  PreviewItemPrice,
+  PreviewItemWrapaper,
+} from "./preview-item.styles";
+
 const PreviewItem = ({ item, addItem, wishlisted }) => {
   const { imageUrl, price, name } = item;
   return (
-    <div className="preview-item">
-      <div
-        className="preview-item-image"
+    <PreviewItemWrapaper>
+      <PreviewItemImage
         style={{
           backgroundImage: `url(${imageUrl})`,
         }}
       >
         <div onClick={() => wishlisted(item)}>
-          <Heart />
+          <HeartIcon />
         </div>
-      </div>
-      <div className="preview-item-details">
-        <p className="item-name">{name}</p>
-        <p className="item-price">{price}$</p>
+      </PreviewItemImage>
+      <PreviewItemDetails>
+        <PreviewItemName>{name}</PreviewItemName>
+        <PreviewItemPrice>{price}$</PreviewItemPrice>
         <CustomButton isShopItem onClick={() => addItem(item)}>
           Add to cart
         </CustomButton>
-      </div>
-    </div>
+      </PreviewItemDetails>
+    </PreviewItemWrapaper>
   );
 };
 const mapDispatchToProps = (dispatch) => ({

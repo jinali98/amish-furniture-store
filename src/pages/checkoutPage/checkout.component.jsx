@@ -4,25 +4,30 @@ import { createStructuredSelector } from "reselect";
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
 import StripeButton from "../../components/stripe-button/stripe-button.component";
 import { selectCartItems, selectTotal } from "../../redux/cart/cart.selectors";
-import "./checkout.styles.css";
+import {
+  CheckoutItemWrapper,
+  CheckoutPageContainer,
+  TotalAmount,
+  TotalAmountWrapper,
+} from "./checkout.styles";
 
 const CheckoutPage = ({ cartitems, cartTotal }) => {
   return (
-    <div className="checkout-page-container">
-      <div className="checkout-items-wrapper">
+    <CheckoutPageContainer>
+      <CheckoutItemWrapper>
         {cartitems.map((item) => (
           <CheckoutItem key={item.id} item={item} />
         ))}
-      </div>
-      <div className="total-amount-wrapper">
-        <p className="total-amount">Total amount: ${cartTotal}</p>
-      </div>
+      </CheckoutItemWrapper>
+      <TotalAmountWrapper>
+        <TotalAmount>Total amount: ${cartTotal}</TotalAmount>
+      </TotalAmountWrapper>
       <div>
         <StripeButton price={cartTotal} />
         <p>Please use the following Test Card Data</p>
         <p>4242 4242 4242 4242 - 01/23 - 123 </p>
       </div>
-    </div>
+    </CheckoutPageContainer>
   );
 };
 

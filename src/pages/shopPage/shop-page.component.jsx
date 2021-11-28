@@ -4,7 +4,7 @@ import { Route } from "react-router-dom";
 import ShopOverviewContainer from "../../components/shop-overview/shop-overview.container";
 import { startFetchingCollection } from "../../redux/shop/shop.actions";
 import CategoryPageContainer from "../categoryPage/category-page.container";
-import "./shop-page.styles.css";
+import { ShopPageWrapper } from "./shop-page.styles";
 
 class ShopPage extends Component {
   componentDidMount() {
@@ -16,14 +16,14 @@ class ShopPage extends Component {
   render() {
     const { match } = this.props;
     return (
-      <div className="shop-container">
+      <ShopPageWrapper>
         <Route exact path={`${match.path}`} component={ShopOverviewContainer} />
         <Route
           exact
           path={`${match.path}/:categoryId`}
           component={CategoryPageContainer}
         />
-      </div>
+      </ShopPageWrapper>
     );
   }
 }

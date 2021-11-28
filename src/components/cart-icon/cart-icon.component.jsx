@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import { cartToggle } from "../../redux/cart/cart.actions";
 import { CartIconContainer, CartNumber, SvgIcon } from "./cart-icon.styles";
-import "./cart-icon.styles.css";
 const CartIcon = ({ cartToggle, numberOfCartItems }) => {
   return (
     <CartIconContainer onClick={cartToggle}>

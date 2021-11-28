@@ -1,13 +1,12 @@
 import { Component } from "react";
 import { connect } from "react-redux";
-import { auth, signInWithGoogle } from "../../firebase/firebase.utils";
 import {
   emailSigninStarted,
   googleSigninStarted,
 } from "../../redux/user/user.actions";
 import CustomButton from "../custom-button/custom-button.component";
 import FormInput from "../form-input/form-input.component";
-import "./signin.styles.css";
+import { Buttons, Form, SignInContainer, SignInTitle } from "./signin.styles";
 
 class Signin extends Component {
   constructor() {
@@ -31,21 +30,14 @@ class Signin extends Component {
     const { email, password } = this.state;
     const { emailSigninStart } = this.props;
     emailSigninStart(email, password);
-
-    // try {
-    //   await auth.signInWithEmailAndPassword(email, password);
-    //   this.setState({ email: "", password: "" });
-    // } catch (err) {
-    //   console.log(err.message);
-    // }
   };
 
   render() {
     const { googleSignIn } = this.props;
     return (
-      <div className="signin-container">
-        <h2 className="signin-title">SIGN IN</h2>
-        <form onSubmit={this.formSubmitHandler}>
+      <SignInContainer>
+        <SignInTitle>SIGN IN</SignInTitle>
+        <Form onSubmit={this.formSubmitHandler}>
           <FormInput
             className="form-input"
             type="email"
@@ -65,16 +57,16 @@ class Signin extends Component {
             label="Password"
           />
 
-          <div className="buttons">
+          <Buttons>
             <CustomButton isSubmit type="submit">
               sign in
             </CustomButton>
             <CustomButton type="button" onClick={googleSignIn} isGoogle>
               sign in with Google
             </CustomButton>
-          </div>
-        </form>
-      </div>
+          </Buttons>
+        </Form>
+      </SignInContainer>
     );
   }
 }

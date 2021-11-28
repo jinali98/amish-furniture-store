@@ -12,6 +12,15 @@ export const CheckoutItemWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: 85vw;
+  }
+
+  @media (max-width: 360px) {
+    flex-direction: column;
+    height: max-content;
+  }
 `;
 
 export const CheckoutItemImage = styled.div`
@@ -28,10 +37,19 @@ export const CheckoutItemDetails = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+
+  @media (max-width: 360px) {
+    width: 90%;
+    text-align: center;
+  }
 `;
 
 export const CheckoutItemQuantity = styled.p`
   font-size: 20px;
+  @media (max-width: 360px) {
+    width: 90%;
+    text-align: center;
+  }
 `;
 export const CheckoutItemName = styled(CheckoutItemQuantity)``;
 
@@ -56,4 +74,8 @@ export const ItemTotalAmount = styled.p`
   width: 10%;
   font-weight: 600;
   font-size: 20px;
+  @media (max-width: 360px) {
+    width: 90%;
+    text-align: center;
+  }
 `;

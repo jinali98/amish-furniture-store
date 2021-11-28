@@ -1,13 +1,14 @@
 import React from "react";
 import Directory from "../../components/directory/directory.component";
 import LandingContent from "../../components/landingContent/landing-content.component";
-import "./home-page.styles.css";
+import { HomePageWrapper } from "./home-page.styles";
+
 const HomePage = () => {
   return (
-    <div className="home-page">
+    <HomePageWrapper>
       <LandingContent />
       <Directory />
-    </div>
+    </HomePageWrapper>
   );
 };
 

@@ -1,4 +1,14 @@
 
+<style>
+  img {
+    display: inline-block;
+  }
+  .mobile-image {
+    width: 49%;
+    display: inline-block;
+  }
+</style>
+
 # Amish – E-commerce website 
 
 Amish is a responsive and functional E commerce website created for a furniture store
@@ -32,8 +42,8 @@ Amish is a responsive and functional E commerce website created for a furniture 
 11.	Store cart data and favorite list data in local storage  
 
 ## Gallery
-<img src="https://user-images.githubusercontent.com/68109485/143798881-abec948c-24f1-432c-9a92-fc465dfcb67a.jpg" alt="amish" border="0" width="50%">
-<img src="https://user-images.githubusercontent.com/68109485/143798884-7b17bb91-f479-4473-9d68-0fca2f02dca3.jpg" alt="amish" border="0" width="50%">
-<img src="https://user-images.githubusercontent.com/68109485/143798880-c326ca43-7962-4f71-ab92-19f823e0ad4b.jpg" alt="amish" border="0" width="50%">
-<img src="https://user-images.githubusercontent.com/68109485/143798886-daf4c1d8-efb9-4fc5-85e2-8dc1aa21707a.jpg" alt="amish" border="0" width="50%">
+<img class="mobile-image" src="https://user-images.githubusercontent.com/68109485/143798881-abec948c-24f1-432c-9a92-fc465dfcb67a.jpg" alt="amish" border="0" width="50%">
+<img class="mobile-image" src="https://user-images.githubusercontent.com/68109485/143798884-7b17bb91-f479-4473-9d68-0fca2f02dca3.jpg" alt="amish" border="0" width="50%">
+<img class="mobile-image" src="https://user-images.githubusercontent.com/68109485/143798880-c326ca43-7962-4f71-ab92-19f823e0ad4b.jpg" alt="amish" border="0" width="50%">
+<img class="mobile-image" src="https://user-images.githubusercontent.com/68109485/143798886-daf4c1d8-efb9-4fc5-85e2-8dc1aa21707a.jpg" alt="amish" border="0" width="50%">
 

@@ -3,6 +3,14 @@
 
 Amish is a responsive and functional E commerce website created for a furniture store
 
+<img src="https://user-images.githubusercontent.com/68109485/143798880-c326ca43-7962-4f71-ab92-19f823e0ad4b.jpg" alt="amish" border="0" width="50%">
+
+<img src="https://user-images.githubusercontent.com/68109485/143798880-c326ca43-7962-4f71-ab92-19f823e0ad4b.jpg" alt="amish" border="0" width="50%">
+<img src="https://user-images.githubusercontent.com/68109485/143798880-c326ca43-7962-4f71-ab92-19f823e0ad4b.jpg" alt="amish" border="0" width="50%">
+<img src="https://user-images.githubusercontent.com/68109485/143798880-c326ca43-7962-4f71-ab92-19f823e0ad4b.jpg" alt="amish" border="0" width="50%">
+<img src="https://user-images.githubusercontent.com/68109485/143798880-c326ca43-7962-4f71-ab92-19f823e0ad4b.jpg" alt="amish" border="0" width="50%">
+<img src="https://user-images.githubusercontent.com/68109485/143798880-c326ca43-7962-4f71-ab92-19f823e0ad4b.jpg" alt="amish" border="0" width="50%"><img src="https://user-images.githubusercontent.com/68109485/143798880-c326ca43-7962-4f71-ab92-19f823e0ad4b.jpg" alt="amish" border="0" width="50%">
+
 ## Stack
 
 - React.js to build the front-end
@@ -30,4 +38,9 @@ Amish is a responsive and functional E commerce website created for a furniture 
 11.	Store cart data and favorite list data in local storage  
 
 
- 
+ ![smartmockups_kwk1mzi7](https://user-images.githubusercontent.com/68109485/143798880-c326ca43-7962-4f71-ab92-19f823e0ad4b.jpg)
+![smartmockups_kwk1mlr0](https://user-images.githubusercontent.com/68109485/143798881-abec948c-24f1-432c-9a92-fc465dfcb67a.jpg)
+![smartmockups_kwk1lyob](https://user-images.githubusercontent.com/68109485/143798882-f03a0e05-9e3b-4c0a-9532-09986ddd67bd.jpg)
+![smartmockups_kwk1jcly](https://user-images.githubusercontent.com/68109485/143798884-7b17bb91-f479-4473-9d68-0fca2f02dca3.jpg)
+![smartmockups_kwk1o39e](https://user-images.githubusercontent.com/68109485/143798886-daf4c1d8-efb9-4fc5-85e2-8dc1aa21707a.jpg)
+![smartmockups_kwk1nm9y](https://user-images.githubusercontent.com/68109485/143798888-7a881470-d35d-4c38-9af3-e3f7ee5df0cc.jpg)
